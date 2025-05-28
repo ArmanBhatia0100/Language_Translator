@@ -8,12 +8,14 @@ import { copyToClipboard } from '../services/utils';
 
 
 export default function Translator({ getTranslatedTextFromComponent }) {
+    
     const [characterCount, setCharacterCount] = useState(0);
     const [textToTranslate, setTextToTranslate] = useState("");
+
     return (
         <div className="input-container-one bg-red-200 p-4 rounded-lg w-full md:w-1/2">
             <div className="navbar">
-                <TranslatorNavbar />
+                <TranslatorNavbar language="English" myLable="From"/>
             </div>
             <div className="text-area">
                 <TranslatorTextArea textToTranslate={textToTranslate} setTextToTranslate={setTextToTranslate} setCharacterCount={setCharacterCount}/>

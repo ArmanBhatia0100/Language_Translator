@@ -16,7 +16,7 @@ export default function TranslatorResult({translatedText, resultCharacterCount})
     return (
         <div className="input-container-one bg-red-200 p-4 rounded-lg w-full md:w-1/2">
             <div className="navbar">
-                <TranslatorNavbar />
+                <TranslatorNavbar language="French" />
             </div>
             <div className="text-area">
                 <TranslatorResultArea translatedText={translatedText} />
