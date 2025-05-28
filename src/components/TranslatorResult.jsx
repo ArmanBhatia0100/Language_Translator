@@ -1,9 +1,9 @@
 import TranslatorNavbar from './translatorNavbar'
 import TranslatorResultArea from './TranslatorResultArea'
-import { Button } from '@mui/material'
 import CopyAllIcon from '@mui/icons-material/CopyAll';
 import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
+import { copyToClipboard } from '../services/utils';
 
 export default function TranslatorResult({translatedText, resultCharacterCount}) {
     const [characterCount, setCharacterCount] = useState(0);
@@ -19,7 +19,7 @@ export default function TranslatorResult({translatedText, resultCharacterCount})
                 <p className='text-sm text-gray-500 mb-2'>{resultCharacterCount}/300</p>
                 <div className="flex flex-row items-center justify-between w-full">
                     <div className='icons-button'>
-                        <IconButton aria-label="delete">
+                        <IconButton aria-label="copy" onClick={() => copyToClipboard(translatedText)}>
                             <CopyAllIcon />
                         </IconButton>
                     </div>
