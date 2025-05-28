@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 import Divider from '@mui/material/Divider';
 
 
-function ResponsiveAppBar({language, myLable}) {
+function TranslatorNavbar({language, myLable}) {
     return (
         <>
             <div className="navbar flex flex-row justify-start gap-4 items-center">
@@ -13,4 +13,4 @@ function ResponsiveAppBar({language, myLable}) {
         </>
     );
 }
-export default ResponsiveAppBar;
+export default TranslatorNavbar;
