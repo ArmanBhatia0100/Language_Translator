@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
 
 export default function Translator({ getTranslatedTextFromComponent }) {
+    const [characterCount, setCharacterCount] = useState(0);
     const [textToTranslate, setTextToTranslate] = useState("");
     return (
         <div className="input-container-one bg-red-200 p-4 rounded-lg w-full md:w-1/2">
@@ -13,10 +14,10 @@ export default function Translator({ getTranslatedTextFromComponent }) {
                 <TranslatorNavbar />
             </div>
             <div className="text-area">
-                <TranslatorTextArea textToTranslate={textToTranslate} setTextToTranslate={setTextToTranslate}/>
+                <TranslatorTextArea textToTranslate={textToTranslate} setTextToTranslate={setTextToTranslate} setCharacterCount={setCharacterCount}/>
             </div>
             <div className="button-container flex flex-col items-end">
-                <p className='text-sm text-gray-500 mb-2'>0/300</p>
+                <p className='text-sm text-gray-500 mb-2'>{characterCount}/300</p>
                 <div className="flex flex-row items-center justify-between w-full">
                     <div className='icons-button'>
                         <IconButton aria-label="delete">
