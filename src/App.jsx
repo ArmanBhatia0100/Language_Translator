@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './assets/logo.svg';
 import Translator from './components/Translator'
 import { translateText } from './services/translations';
 import TranslatorResult from './components/TranslatorResult';
@@ -18,7 +19,7 @@ function App() {
   return (
     <div className='min-w-screen min-h-screen bg-[url(./assets/hero_img.jpg)] bg-cover bg-center flex flex-col items-center justify-center pt-0'>
       
-        <img src="/public/logo.svg" alt="logo" className='w-96' />
+        <img src={logo} alt="logo" className='w-96' />
       
       <div className="flex flex-col items-center justify-center box-border p-10 gap-2 w-full md:flex-row">
 

@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import Divider from '@mui/material/Divider';
 
 
@@ -12,4 +14,10 @@ function TranslatorNavbar({language, myLable}) {
         </>
     );
 }
+
+TranslatorNavbar.propTypes = {
+    language: PropTypes.string,
+    myLable: PropTypes.string
+};
+
 export default TranslatorNavbar;
