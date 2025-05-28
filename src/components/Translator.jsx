@@ -5,6 +5,7 @@ import CopyAllIcon from '@mui/icons-material/CopyAll';
 import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
 import { copyToClipboard } from '../services/utils';
+import TranslatorNavbar from './translatorNavbar';
 
 
 export default function Translator({ getTranslatedTextFromComponent }) {

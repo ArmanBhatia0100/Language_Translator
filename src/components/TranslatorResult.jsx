@@ -1,4 +1,4 @@
-    import TranslatorNavbar from './translatorNavbar'
+    import TranslatorNavbar from './TranslatorNavbar'
     import TranslatorResultArea from './TranslatorResultArea'
 import CopyAllIcon from '@mui/icons-material/CopyAll';
 import IconButton from '@mui/material/IconButton';
