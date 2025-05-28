@@ -1,3 +1,4 @@
+import React from 'react';
 import Translator from './components/Translator'
 import { translateText } from './services/translations';
 import TranslatorResult from './components/TranslatorResult';

@@ -1,5 +1,7 @@
-    import TranslatorNavbar from './TranslatorNavbar'
-    import TranslatorResultArea from './TranslatorResultArea'
+import React from 'react';
+import PropTypes from 'prop-types';
+import TranslatorNavbar from './TranslatorNavbar'
+import TranslatorResultArea from './TranslatorResultArea'
 import CopyAllIcon from '@mui/icons-material/CopyAll';
 import IconButton from '@mui/material/IconButton';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
@@ -37,3 +39,8 @@ export default function TranslatorResult({translatedText, resultCharacterCount})
         </div>
     )
 }
+
+TranslatorResult.propTypes = {
+  translatedText: PropTypes.string,
+  resultCharacterCount: PropTypes.number
+};

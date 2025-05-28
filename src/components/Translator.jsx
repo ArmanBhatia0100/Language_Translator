@@ -1,10 +1,12 @@
-import TranslatorNavbar from './translatorNavbar'
+import React from 'react';
+import TranslatorNavbar from './TranslatorNavbar'
 import TranslatorTextArea from './TranslatorTextArea'
 import { Button } from '@mui/material'
 import CopyAllIcon from '@mui/icons-material/CopyAll';
 import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
 import { copyToClipboard } from '../services/utils';
+import PropTypes from 'prop-types';
 
 
 export default function Translator({ getTranslatedTextFromComponent }) {
@@ -39,3 +41,7 @@ export default function Translator({ getTranslatedTextFromComponent }) {
         </div>
     )
 }
+
+Translator.propTypes = {
+  getTranslatedTextFromComponent: PropTypes.func
+};
