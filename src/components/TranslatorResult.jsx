@@ -14,9 +14,9 @@ const handleSpeak = (text) => {
 
 export default function TranslatorResult({translatedText, resultCharacterCount}) {
     return (
-        <div className="input-container-one bg-red-200 p-4 rounded-lg w-full md:w-1/2">
+        <div className="input-container-one border-2 border-gray-500 shadow-xl shadow-gray-700/40 bg-gray-900/40 text-gray-300 backdrop-blur-lg p-4 rounded-lg w-full md:w-1/2">
             <div className="navbar">
-                <TranslatorNavbar language="French" />
+                <TranslatorNavbar language="French" myLable="To"/>
             </div>
             <div className="text-area">
                 <TranslatorResultArea translatedText={translatedText} />
@@ -26,10 +26,10 @@ export default function TranslatorResult({translatedText, resultCharacterCount})
                 <div className="flex flex-row items-center justify-between w-full">
                     <div className='icons-button'>
                         <IconButton aria-label="copy" onClick={() => copyToClipboard(translatedText)}>
-                            <CopyAllIcon />
+                            <CopyAllIcon className='text-gray-300'/>
                         </IconButton>
                         <IconButton aria-label="speak" onClick={() => handleSpeak(translatedText)}>
-                            <VolumeUpIcon />
+                            <VolumeUpIcon className='text-gray-300'/>
                         </IconButton>
                     </div>
 

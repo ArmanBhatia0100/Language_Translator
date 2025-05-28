@@ -13,7 +13,7 @@ export default function Translator({ getTranslatedTextFromComponent }) {
     const [textToTranslate, setTextToTranslate] = useState("");
 
     return (
-        <div className="input-container-one bg-red-200 p-4 rounded-lg w-full md:w-1/2">
+        <div className="input-container-one border-2 border-gray-500 shadow-xl shadow-gray-700/40 bg-gray-900/40 text-gray-300 backdrop-blur-lg p-4 rounded-lg w-full md:w-1/2">
             <div className="navbar">
                 <TranslatorNavbar language="English" myLable="From"/>
             </div>
@@ -25,11 +25,11 @@ export default function Translator({ getTranslatedTextFromComponent }) {
                 <div className="flex flex-row items-center justify-between w-full">
                     <div className='icons-button'>
                         <IconButton aria-label="delete" onClick={() => copyToClipboard(textToTranslate)}>
-                            <CopyAllIcon />
+                            <CopyAllIcon className='text-gray-300'/>
                         </IconButton>
                     </div>
                     {getTranslatedTextFromComponent && (
-                        <Button variant="contained" onClick={
+                        <Button variant="contained"  color='success' onClick={
                             () => getTranslatedTextFromComponent(textToTranslate, "english", "french")
                         }>
                             Translate</Button>

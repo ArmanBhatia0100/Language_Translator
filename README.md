@@ -1,12 +1,60 @@
-# React + Vite
+# Translator.io
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for translating text between English and French. Built with React, Vite, Material UI, and Tailwind CSS, Translator.io offers a fast, user-friendly interface for quick translations, copying, and listening to translated text.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🌐 Translate text between English and French using the MyMemory API
+- 📋 Copy input or translated text to clipboard
+- 🔊 Listen to translated text with speech synthesis
+- 🧮 Character count for both input and output (up to 300 characters)
+- ⚡ Fast, responsive UI with Material UI and Tailwind CSS
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Material UI](https://mui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [MyMemory Translation API](https://mymemory.translated.net/)
+
+## Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd TranslaterWebApp
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+4. **Open your browser:**
+   Visit [http://localhost:5173](http://localhost:5173) (or the URL shown in your terminal).
+
+## Usage
+
+- Enter text (up to 300 characters) in the input area.
+- Click **Translate** to get the French translation.
+- Use the copy button to copy text, or the speaker button to listen to the translation.
+
+## Scripts
+
+- `npm run dev` – Start the development server
+- `npm run build` – Build for production
+- `npm run preview` – Preview the production build
+- `npm run lint` – Run ESLint
+
+## Credits
+
+- [MyMemory Translation API](https://mymemory.translated.net/)
+- [Material UI](https://mui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+Feel free to contribute or open issues for suggestions and bug reports!
