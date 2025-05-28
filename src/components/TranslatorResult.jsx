@@ -1,19 +1,18 @@
 import TranslatorNavbar from './translatorNavbar'
-import TranslatorTextArea from './TranslatorTextArea'
+import TranslatorResultArea from './TranslatorResultArea'
 import { Button } from '@mui/material'
 import CopyAllIcon from '@mui/icons-material/CopyAll';
 import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
 
-export default function Translator({ getTranslatedTextFromComponent }) {
-    const [textToTranslate, setTextToTranslate] = useState("");
+export default function TranslatorResult({translatedText }) {
     return (
         <div className="input-container-one bg-red-200 p-4 rounded-lg w-full md:w-1/2">
             <div className="navbar">
                 <TranslatorNavbar />
             </div>
             <div className="text-area">
-                <TranslatorTextArea textToTranslate={textToTranslate} setTextToTranslate={setTextToTranslate}/>
+                <TranslatorResultArea translatedText={translatedText} />
             </div>
             <div className="button-container flex flex-col items-end">
                 <p className='text-sm text-gray-500 mb-2'>0/300</p>
@@ -23,12 +22,7 @@ export default function Translator({ getTranslatedTextFromComponent }) {
                             <CopyAllIcon />
                         </IconButton>
                     </div>
-                    {getTranslatedTextFromComponent && (
-                        <Button variant="contained" onClick={
-                            () => getTranslatedTextFromComponent(textToTranslate, "english", "french")
-                        }>
-                            Translate</Button>
-                    )}
+
                 </div>
             </div>
         </div>
